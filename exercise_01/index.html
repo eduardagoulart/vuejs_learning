@@ -20,8 +20,8 @@
          </div>
          <!-- 5) Pre-Populate this input with your name (set the "value" attribute) -->
          <div>
-             <input type="text" v-on:input=changeName>
-             <input type="number" v-on:input=changeAge>
+             <input type="text" v-on:input=changeName v-bind:value='name'>
+             <input type="number" v-on:input=changeAge v-bind:value='age'>
          </div>
      </div>
     <script>
