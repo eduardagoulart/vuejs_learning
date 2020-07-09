@@ -1,53 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Learning VueJs</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div id="exercise">
-        <!-- 1) Fill the <p> below with your Name and Age - using Interpolation -->
-         <p style="display:inline"> {{ text }}- {{ name }} ({{age}})</p>
-         <!-- 2) Output your age, multiplied by 3 -->
-         <p>{{ agePerThree() }}</p>
-         <!-- 3) Call a function to output a random float between 0 and 1 (Math.random()) -->
-         <p>{{ randomFloat() }}</p>
-         <!-- 4) Search any image on Google and output it here by binding the "src" attribute -->
-         <div>
-             <img style="width:100px;height:100px" v-bind:src="image">
-         </div>
-         <!-- 5) Pre-Populate this input with your name (set the "value" attribute) -->
-         <div>
-             <input type="text" v-on:input=changeName v-bind:value='name'>
-             <input type="number" v-on:input=changeAge v-bind:value='age'>
-         </div>
-     </div>
+      <!-- 1) Fill the <p> below with your Name and Age - using Interpolation -->
+      <p style="display: inline;">{{ text }}- {{ name }} ({{age}})</p>
+      <!-- 2) Output your age, multiplied by 3 -->
+      <p>{{ agePerThree() }}</p>
+      <!-- 3) Call a function to output a random float between 0 and 1 (Math.random()) -->
+      <p>{{ randomFloat() }}</p>
+      <!-- 4) Search any image on Google and output it here by binding the "src" attribute -->
+      <div>
+        <img style="width: 100px; height: 100px;" v-bind:src="image" />
+      </div>
+      <!-- 5) Pre-Populate this input with your name (set the "value" attribute) -->
+      <div>
+        <input type="text" v-on:input="changeName" v-bind:value="name" />
+        <input type="number" v-on:input="changeAge" v-bind:value="age" />
+      </div>
+    </div>
     <script>
-        new Vue({
-            el: '#exercise',
-            data: {
-                text: 'VueJS is pretty cool',
-                name: 'Eduarda',
-                age: '23',
-                image: 'stitch.jpg'
-            },
-            methods: {
-                changeName: function(event) {
-                    this.name = event.target.value
-                },
-                changeAge: function(event) {
-                    this.age = event.target.value
-                },
-                agePerThree: function() {
-                    return this.age * 3
-                },
-                randomFloat: function() {
-                    return Math.random() * (1 - 0) + 0
-                }
-            }
-        });
+      new Vue({
+        el: "#exercise",
+        data: {
+          text: "VueJS is pretty cool",
+          name: "Eduarda",
+          age: "23",
+          image: "stitch.jpg",
+        },
+        methods: {
+          changeName: function (event) {
+            this.name = event.target.value;
+          },
+          changeAge: function (event) {
+            this.age = event.target.value;
+          },
+          agePerThree: function () {
+            return this.age * 3;
+          },
+          randomFloat: function () {
+            return Math.random() * (1 - 0) + 0;
+          },
+        },
+      });
     </script>
-</body>
+  </body>
 </html>
