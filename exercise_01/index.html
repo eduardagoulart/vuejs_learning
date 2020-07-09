@@ -9,7 +9,7 @@
 <body>
     <div id="exercise">
         <!-- 1) Fill the <p> below with your Name and Age - using Interpolation -->
-         <p style="display:inline"> {{ text }}- {{ name }} (<p style="display:inline" v-once>{{ age }}</p>)</p>
+         <p style="display:inline"> {{ text }}- {{ name }} ({{age}})</p>
          <!-- 2) Output your age, multiplied by 3 -->
          <p>{{ agePerThree() }}</p>
          <!-- 3) Call a function to output a random float between 0 and 1 (Math.random()) -->
@@ -29,8 +29,8 @@
             el: '#exercise',
             data: {
                 text: 'VueJS is pretty cool',
-                name: 'YOUR NAME',
-                age: 'AGE',
+                name: 'Eduarda',
+                age: '23',
                 image: 'stitch.jpg'
             },
             methods: {
