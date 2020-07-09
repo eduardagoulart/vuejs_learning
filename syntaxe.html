@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning VueJs</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h4 v-once>{{ title }}</h4>
+        <p>{{ sayHello() }} - <a v-bind:href="link">Udemy</a></p>
+        <br>
+        <p v-html='finishLink'></p>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                title: 'Hello World!',
+                link: 'https://www.udemy.com/home/my-courses/learning/',
+                finishLink: '<a href="https://www.udemy.com/home/my-courses/learning/">Another way to open Udemy</a>'
+            },
+            methods: {
+                sayHello: function() {
+                    this.title = 'Hello'
+                    return this.title
+                }
+            }
+        });
+    </script>
+</body>
+</html>
